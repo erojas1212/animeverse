@@ -3,10 +3,10 @@ import React, { createContext, useState, useEffect } from "react";
 const AnimeContext = createContext();
 function AnimeProvider(props) {
   const [animeVerse, setAnimeVerse] = useState([]);
-  const [favorites, setFavorites] = useState([]);
+  const [favorites, setFavorites] = useState([]); 
 
   const baseUrl = "https://api.jikan.moe/v4/anime";
-  
+
 
   const addToFavorites = (anime) => {
     setFavorites([...favorites, anime]);
